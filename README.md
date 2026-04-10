@@ -1,4 +1,4 @@
-# Hi, I'm Vinisha! 👋
+# Hi, I'm Vinisha!
 
 I'm a Computer Science & Mathematics student at the **University of Washington Bothell**, passionate about building AI-powered applications and doing impactful research that bridges machine learning with real-world problems.
 
@@ -8,7 +8,7 @@ I'm a Computer Science & Mathematics student at the **University of Washington B
 
 **University of Washington Bothell** — Sep 2022 – Jun 2026  
 B.S. Computer Science & Software Engineering · B.S. Mathematics  
-GPA: **3.86**
+GPA: **3.88**
 
 ---
 
@@ -65,5 +65,4 @@ Built four full-stack portals (Admin, HR, Employee, IT) with React + REST APIs, 
 ## 📬 Let's Connect!
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/vinishab)
-[![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:viba2022@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/vinisha231)
+[![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:viba2022@gmail.com) 
