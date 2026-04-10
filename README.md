@@ -21,14 +21,24 @@ Improving sparse-view CT image quality using CNNs + SART. Achieved PSNR 36.5–3
 **💻 Software Engineer Intern** · Quadrant Technologies LLC, Redmond WA _(Jul 2025 – Aug 2025)_
 Built four full-stack internal portals (Admin, HR, Employee, IT) with React and REST APIs. Leveraged **☁️ Azure App Service**, **Azure Container Registry**, and **Azure DevOps** pipelines — reducing deployment time by **30%** and improving cross-team operational efficiency by **35%**.
 
+**👩‍🏫 Coding Instructor** · Edmonds _(2024)_
+Taught **Scratch** programming to a group of 7 students aged 11–13, introducing core programming concepts — sequences, loops, conditionals, and events — through hands-on, project-based lessons. Made coding approachable and fun for kids with no prior experience.
+
 ---
 
 ## 🛠️ Tech Stack
 
-**💬 Languages:** Python · JavaScript · C · C++ · Java · SQL · HTML/CSS
-**⚙️ Frameworks:** React · FastAPI · Node.js · Flask · TensorFlow
-**☁️ Cloud & DevOps:** AWS (Elastic Beanstalk · Amplify · Bedrock · RDS · Polly · Transcribe) · Azure (App Service · Container Registry · DevOps) · Docker · Vercel
-**📦 Libraries:** NumPy · pandas · Matplotlib · OpenCV
+**💬 Languages:**
+Python · JavaScript · C · C++ · Java · SQL · HTML/CSS
+
+**⚙️ Frameworks:**
+React · FastAPI · Node.js · Flask · TensorFlow
+
+**☁️ Cloud & DevOps:**
+AWS (Elastic Beanstalk · Amplify · Bedrock · RDS · Polly · Transcribe) · Azure (App Service · Container Registry · DevOps) · Docker · Vercel
+
+**📦 Libraries:**
+NumPy · pandas · Matplotlib · OpenCV
 
 ---
 
