@@ -2,14 +2,14 @@
 
 I'm a **Computer Science & Mathematics** student at the **University of Washington Bothell** (graduating June 2026), passionate about AI/ML research and building full-stack applications that solve real problems.
 
-Currently doing undergraduate research on sparse-view CT reconstruction — using neural networks to produce high-quality medical images from fewer X-ray projections, reducing patient radiation exposure.
+Currently writing to publish my undergraduate research on sparse-view CT reconstruction, using neural networks to produce high-quality medical images from fewer X-ray projections, reducing patient radiation exposure.
 
 ---
 
 ## 🎓 Education
 
 **University of Washington Bothell** — B.S. Computer Science & Software Engineering · B.S. Mathematics  
-GPA: 3.86 · Sep 2022 – Jun 2026
+GPA: 3.88 · Sep 2022 – Jun 2026
 
 ---
 
