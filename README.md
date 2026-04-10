@@ -1,4 +1,4 @@
-# Hi, I'm Vinisha 👋
+# Hi, I'm Vinisha 
 
 I'm a **Computer Science & Mathematics** student at the **University of Washington Bothell** (graduating June 2026), passionate about AI/ML research and building full-stack applications that solve real problems.
 
