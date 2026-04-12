@@ -15,11 +15,11 @@ GPA: 3.88 · Sep 2022 – Jun 2026
 
 ## 💼 Experience
 
-**🔬 Student Researcher — CT Reconstruction** · UW Bothell _(Jun 2024 – Present)_
+**🔬 Student Researcher · CT Reconstruction** · UW Bothell _(Jun 2024 – Present)_
 Improving sparse-view CT image quality using CNNs + SART. Achieved PSNR 36.5–39.9 dB and SSIM 0.95–0.97.
 
 **💻 Software Engineer Intern** · Quadrant Technologies LLC, Redmond WA _(Jul 2025 – Aug 2025)_
-Built four full-stack internal portals (Admin, HR, Employee, IT) with React and REST APIs. Leveraged **☁️ Azure App Service**, **Azure Container Registry**, and **Azure DevOps** pipelines — reducing deployment time by **30%** and improving cross-team operational efficiency by **35%**.
+Built four full-stack internal portals (Admin, HR, Employee, IT) with React and REST APIs. Leveraged **☁️ Azure App Service**, **Azure Container Registry**, and **Azure DevOps** pipelines, reducing deployment time by **30%** and improving cross-team operational efficiency by **35%**.
 
 **👩‍🏫 Teaching Assistant** · Edmonds Community College _(Mar 2024 - Jun 2024)_
 Taught **Scratch** programming to a group of 7 students aged 11–13, introducing core programming concepts, sequences, loops, conditionals, and events, through hands-on, project-based lessons. Made coding approachable and fun for kids with little to no prior experience.
