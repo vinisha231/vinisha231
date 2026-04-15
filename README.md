@@ -42,7 +42,8 @@ NumPy · pandas · Matplotlib · OpenCV
 
 ---
 
-## 🚀 Projects
+## 🚀 Noteworthy Projects! 
+Check out my repos for more!!! 
 
 | 🗂️ Project | 📝 Description | 🔧 Stack |
 |---------|-------------|-------|
