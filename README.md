@@ -1,6 +1,6 @@
 # Hi, I'm Vinisha! 👋✨
 
-![Profile Views](https://komarev.com/ghpvc/?username=vinisha231&color=blueviolet&style=flat&label=Profile+Views)
+![Profile Views](https://komarev.com/ghpvc/?username=vinisha231&color=5983FC&style=flat&label=Profile+Views)
 
 I'm a **Computer Science & Mathematics** student at the **University of Washington Bothell** (graduating June 2026), passionate about AI/ML research and building full-stack applications that solve real problems.
 
@@ -87,31 +87,11 @@ NumPy · pandas · Matplotlib · OpenCV
 
 ---
 
-## 🎵 Now Playing on Spotify
-
-<p align="center">
-  <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=viba2022&redirect=true">
-    <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=viba2022&cover_image=true&theme=novatorem&show_offline=true&background_color=1a1b27&interchange=false" />
-  </a>
-</p>
-
----
-
 ## 🌊 Activity Graph
 
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=vinisha231&theme=city-lights&hide_border=true&area=true" />
 </p>
-
----
-
-## 🐍 My Contributions... Being Eaten
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vinisha231/vinisha231/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/vinisha231/vinisha231/output/github-contribution-grid-snake.svg" />
-  <img alt="contribution snake" src="https://raw.githubusercontent.com/vinisha231/vinisha231/output/github-contribution-grid-snake.svg" />
-</picture>
 
 ---
 
