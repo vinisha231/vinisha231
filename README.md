@@ -61,12 +61,46 @@ NumPy · pandas · Matplotlib · OpenCV
 
 ---
 
+## 🏅 Trophies
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=vinisha231&theme=tokyonight&no-frame=true&row=1&column=7&margin-w=10" />
+</p>
+
+---
+
 ## 📊 GitHub Stats
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=vinisha231&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" height="165"/>
   &nbsp;
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vinisha231&layout=compact&theme=tokyonight&hide_border=true&langs_count=6" height="165"/>
+</p>
+
+---
+
+## 🔥 Contribution Streak
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=vinisha231&theme=tokyonight&hide_border=true&date_format=M%20j%5B%2C%20Y%5D" />
+</p>
+
+---
+
+## 🎵 Now Playing on Spotify
+
+<p align="center">
+  <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=viba2022&redirect=true">
+    <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=viba2022&cover_image=true&theme=novatorem&show_offline=true&background_color=121212&interchange=false" />
+  </a>
+</p>
+
+---
+
+## 🌊 Activity Graph
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=vinisha231&theme=tokyo-night&hide_border=true&area=true" />
 </p>
 
 ---
