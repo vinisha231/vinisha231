@@ -46,7 +46,7 @@ NumPy · pandas · Matplotlib · OpenCV
 
 ---
 
-## 🚀 Projects
+## Projects
 
 | 🗂️ Project | 📝 Description | 🔧 Stack |
 |---------|-------------|-------|
@@ -63,7 +63,7 @@ NumPy · pandas · Matplotlib · OpenCV
 
 ---
 
-## 📊 GitHub Stats
+## GitHub Stats
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=vinisha231&show_icons=true&theme=city_lights&hide_border=true&rank_icon=github" height="165"/>
@@ -73,7 +73,7 @@ NumPy · pandas · Matplotlib · OpenCV
 
 ---
 
-## 🔥 Contribution Streak
+## Contribution Streak
 
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=vinisha231&theme=tokyonight&hide_border=true&date_format=M%20j%5B%2C%20Y%5D" />
@@ -81,7 +81,7 @@ NumPy · pandas · Matplotlib · OpenCV
 
 ---
 
-## 🌊 Activity Graph
+## Activity Graph
 
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=vinisha231&theme=city-lights&hide_border=true&area=true" />
