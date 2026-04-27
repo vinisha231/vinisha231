@@ -1,4 +1,6 @@
-# Hi, I'm Vinisha! 👋✨
+<p align="center">
+  <img src="https://raw.githubusercontent.com/vinisha231/vinisha231/main/tokyo_banner.svg" width="100%"/>
+</p>
 
 ![Profile Views](https://komarev.com/ghpvc/?username=vinisha231&color=5983FC&style=flat&label=Profile+Views)
 
@@ -58,14 +60,6 @@ NumPy · pandas · Matplotlib · OpenCV
 | [🎵 Spotify Playlist Generator](https://github.com/vinisha231/SpotifyPlaylistGenerator) | Generates mood-matched playlists from real-time weather and time of day | JavaScript, Spotify API, OpenWeather API |
 | [🔥 Burnlist](https://github.com/vinisha231/Burnlist) | Self-destructing Spotify playlists — tracks auto-remove as you listen | JavaScript, Spotify API, OAuth 2.0 PKCE |
 | [👻 Whispers of the Forgotten](https://github.com/vinisha231/WhispersOfTheForgotten) | 2D horror escape room with a chasing antagonist and NPC dog companion | Unity, C#, WebGL |
-
----
-
-## 🏅 Trophies
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=vinisha231&theme=tokyonight&no-frame=true&row=1&column=7&margin-w=10" />
-</p>
 
 ---
 
