@@ -1,5 +1,7 @@
 # Hi, I'm Vinisha! 👋✨
 
+![Profile Views](https://komarev.com/ghpvc/?username=vinisha231&color=blueviolet&style=flat&label=Profile+Views)
+
 I'm a **Computer Science & Mathematics** student at the **University of Washington Bothell** (graduating June 2026), passionate about AI/ML research and building full-stack applications that solve real problems.
 
 🔬 Currently writing to publish my undergraduate research on sparse-view CT reconstruction, using neural networks to produce high-quality medical images from fewer X-ray projections, reducing patient radiation exposure.
@@ -21,8 +23,8 @@ Improving sparse-view CT image quality using CNNs + SART. Achieved PSNR 36.5–3
 **💻 Software Engineer Intern** · Quadrant Technologies LLC, Redmond WA _(Jul 2025 – Aug 2025)_
 Built four full-stack internal portals (Admin, HR, Employee, IT) with React and REST APIs. Leveraged **☁️ Azure App Service**, **Azure Container Registry**, and **Azure DevOps** pipelines — reducing deployment time by **30%** and improving cross-team operational efficiency by **35%**.
 
-**👩‍🏫 Teaching assistant** · Edmonds Community College _(Mar 2024 - Jun 2024)_
-Taught **Scratch** programming to a group of 7 students aged 11–13, introducing core programming concepts like sequences, loops, conditionals, and events through hands-on, project-based lessons. Made coding approachable and fun for kids with little to no prior experience.
+**👩‍🏫 Coding Instructor** · Edmonds _(2024)_
+Taught **Scratch** programming to a group of 7 students aged 11–13, introducing core programming concepts — sequences, loops, conditionals, and events — through hands-on, project-based lessons. Made coding approachable and fun for kids with no prior experience.
 
 ---
 
@@ -42,14 +44,12 @@ NumPy · pandas · Matplotlib · OpenCV
 
 ---
 
-## 🚀 Noteworthy Projects! 
-Check out my repos for more!!! 
+## 🚀 Projects
 
 | 🗂️ Project | 📝 Description | 🔧 Stack |
 |---------|-------------|-------|
 | [🎙️ LLM Interview Simulator](https://github.com/vinisha231/Interview_simulator) — [🌐 Live](https://vdhaya-interview-simultor.com) | AI mock interview coach with real-time LLM feedback, speech I/O, and performance analytics. Deployed on **AWS Elastic Beanstalk** + **AWS Amplify**, powered by **AWS Bedrock**, **AWS RDS** (PostgreSQL), **AWS Polly** (TTS) & **AWS Transcribe** (STT) | Python, FastAPI, React, AWS |
 | [🏆 Big Back Bites](https://github.com/vinisha231/Big-Back-Bites) | **🥇 Winner — IxDA UWB Designathon 2026.** Food discovery app designed and prototyped in **Figma**, then built out as a fully interactive frontend in TypeScript | TypeScript, Figma |
-| [🔍 pipelens](https://github.com/vinisha231/pipelens) | AI-powered Dockerfile and CI/CD pipeline auditor — detects security holes, layer inefficiencies, exposed secrets, and misconfigured permissions across GitHub Actions and GitLab CI | TypeScript, Anthropic AI |
 | [🔮 Ātmā Milan](https://github.com/vinisha231/atma-milan) — [🌐 Live](https://vinisha231.github.io/atma-milan/) | Vedic soul compatibility checker based on the ancient Hindu Jyotish Ashtakoota system — 8 sacred metrics including temperament, life force, and destiny stars | TypeScript |
 | [🪐 MercuryCI](https://github.com/vinisha231/MercuryCI) | April Fools hackathon — an emotionally aware, astrologically governed CI/CD pipeline that checks your birth chart before merging your PR | Python |
 | [📖 BridgeTales AI](https://github.com/HarshitaRag/BridgeTales-AI) | Hackathon — interactive AI storybook platform with branching narratives, generated images, and speech. Integrated Visa API for local business donations | AWS Bedrock, React, Node.js, PostgreSQL |
@@ -58,6 +58,26 @@ Check out my repos for more!!!
 | [🎵 Spotify Playlist Generator](https://github.com/vinisha231/SpotifyPlaylistGenerator) | Generates mood-matched playlists from real-time weather and time of day | JavaScript, Spotify API, OpenWeather API |
 | [🔥 Burnlist](https://github.com/vinisha231/Burnlist) | Self-destructing Spotify playlists — tracks auto-remove as you listen | JavaScript, Spotify API, OAuth 2.0 PKCE |
 | [👻 Whispers of the Forgotten](https://github.com/vinisha231/WhispersOfTheForgotten) | 2D horror escape room with a chasing antagonist and NPC dog companion | Unity, C#, WebGL |
+
+---
+
+## 📊 GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=vinisha231&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" height="165"/>
+  &nbsp;
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vinisha231&layout=compact&theme=tokyonight&hide_border=true&langs_count=6" height="165"/>
+</p>
+
+---
+
+## 🐍 My Contributions... Being Eaten
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vinisha231/vinisha231/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/vinisha231/vinisha231/output/github-contribution-grid-snake.svg" />
+  <img alt="contribution snake" src="https://raw.githubusercontent.com/vinisha231/vinisha231/output/github-contribution-grid-snake.svg" />
+</picture>
 
 ---
 
