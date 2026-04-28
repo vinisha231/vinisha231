@@ -2,8 +2,6 @@
   <img src="https://raw.githubusercontent.com/vinisha231/vinisha231/main/tokyo_banner.svg" width="100%"/>
 </p>
 
-![Profile Views](https://komarev.com/ghpvc/?username=vinisha231&color=5983FC&style=flat&label=Profile+Views)
-
 I'm a **Computer Science & Mathematics** student at the **University of Washington Bothell** (graduating June 2026), passionate about AI/ML research and building full-stack applications that solve real problems.
 
 🔬 Currently writing to publish my undergraduate research on sparse-view CT reconstruction, using neural networks to produce high-quality medical images from fewer X-ray projections, reducing patient radiation exposure.
