@@ -56,7 +56,7 @@ NumPy · pandas · Matplotlib · OpenCV
 | [💬 Conversation Starter](https://github.com/vinisha231/conversation-starter) | Language learning app — pick a language and real-world scenario, respond to prompts, and get instant conversational feedback | JavaScript |
 | [🧠 CT Reconstruction with CNNs](https://github.com/vinisha231/Computed_Tomography_Reconstruction_using_Convolutional_Neural_Networks) | Sparse-view CT reconstruction using CNN + SART to reduce radiation exposure | Python, TensorFlow, NumPy |
 | [🎵 Spotify Playlist Generator](https://github.com/vinisha231/SpotifyPlaylistGenerator) | Generates mood-matched playlists from real-time weather and time of day | JavaScript, Spotify API, OpenWeather API |
-| [🔥 Burnlist](https://github.com/vinisha231/Burnlist) | Self-destructing Spotify playlists — tracks auto-remove as you listen | JavaScript, Spotify API, OAuth 2.0 PKCE |
+| [🔥 Burnlist](https://github.com/vinisha231/Burnlist) | Self-destructing Spotify playlists, where tracks auto-remove as you listen for one-time feels ;) | JavaScript, Spotify API, OAuth 2.0 PKCE |
 | [👻 Whispers of the Forgotten](https://github.com/vinisha231/WhispersOfTheForgotten) | 2D horror escape room with a chasing antagonist and NPC dog companion | Unity, C#, WebGL |
 
 ---
