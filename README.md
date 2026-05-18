@@ -62,32 +62,6 @@ NumPy · pandas · Matplotlib · OpenCV
 
 ---
 
-## GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=vinisha231&show_icons=true&theme=city_lights&hide_border=true&rank_icon=github" height="165"/>
-  &nbsp;
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vinisha231&layout=compact&theme=city_lights&hide_border=true&langs_count=6" height="165"/>
-</p>
-
----
-
-## Contribution Streak
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=vinisha231&theme=tokyonight&hide_border=true&date_format=M%20j%5B%2C%20Y%5D" />
-</p>
-
----
-
-## Activity Graph
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=vinisha231&theme=city-lights&hide_border=true&area=true" />
-</p>
-
----
-
 ## 📬 Let's Connect!
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/vinishab)
