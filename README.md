@@ -31,13 +31,13 @@ Taught **Scratch** programming to a group of 7 students aged 11–13, introducin
 ## 🛠️ Tech Stack
 
 **💬 Languages:**
-Python · JavaScript · C · C++ · Java · SQL · HTML/CSS
+Python · JavaScript · TypeScript · C · C++ · Java · SQL · HTML/CSS
 
 **⚙️ Frameworks:**
 React · FastAPI · Node.js · Flask · TensorFlow
 
 **☁️ Cloud & DevOps:**
-AWS (Elastic Beanstalk · Amplify · Bedrock · RDS · Polly · Transcribe) · Azure (App Service · Container Registry · DevOps) · Docker · Vercel
+AWS (Lambda · Bedrock · Amplify · Translate · Polly · Aurora · SNS · S3 · API Gateway · Elastic Beanstalk · RDS · Transcribe) · Azure (App Service · Container Registry · DevOps) · Docker · Vercel
 
 **📦 Libraries:**
 NumPy · pandas · Matplotlib · OpenCV
@@ -48,6 +48,7 @@ NumPy · pandas · Matplotlib · OpenCV
 
 | 🗂️ Project | 📝 Description | 🔧 Stack |
 |---------|-------------|-------|
+| [ऋ Rta — AI Benefits Navigator](https://github.com/vinisha231/AWS-Hacks-2026) | **🥈 2nd Place — AWS Hacks 2026, Serverless with Lambda track.** AI-powered government benefits navigator helping underserved individuals discover and apply for SNAP, Medicaid, Section 8, WIC & more. 9-question intake → 10+ programs checked → AI Advocate (letter, mock interview, denial help) → 75+ language support via Amazon Bedrock + Translate + Polly. Built entirely serverless. | Python, React, AWS Lambda, Bedrock, Translate, Polly, Aurora Serverless, SNS, Amplify |
 | [🎙️ LLM Interview Simulator](https://github.com/vinisha231/Interview_simulator) — [🌐 Live](https://vdhaya-interview-simultor.com) | AI mock interview coach with real-time LLM feedback, speech I/O, and performance analytics. Deployed on **AWS Elastic Beanstalk** + **AWS Amplify**, powered by **AWS Bedrock**, **AWS RDS** (PostgreSQL), **AWS Polly** (TTS) & **AWS Transcribe** (STT) | Python, FastAPI, React, AWS |
 | [🏆 Big Back Bites](https://github.com/vinisha231/Big-Back-Bites) | **🥇 Winner — IxDA UWB Designathon 2026.** Food discovery app designed and prototyped in **Figma**, then built out as a fully interactive frontend in TypeScript | TypeScript, Figma |
 | [🔮 Ātmā Milan](https://github.com/vinisha231/atma-milan) — [🌐 Live](https://vinisha231.github.io/atma-milan/) | Vedic soul compatibility checker based on the ancient Hindu Jyotish Ashtakoota system — 8 sacred metrics including temperament, life force, and destiny stars | TypeScript |
