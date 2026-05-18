@@ -53,6 +53,23 @@ NumPy · pandas · Matplotlib · OpenCV
 | [🧠 CT Reconstruction with CNNs](https://github.com/vinisha231/Computed_Tomography_Reconstruction_using_Convolutional_Neural_Networks) | Undergraduate research — sparse-view CT reconstruction using CNN + SART to reduce patient radiation exposure. Achieved PSNR 36.5–39.9 dB and SSIM 0.95–0.97. Writing to publish. | Python, TensorFlow, NumPy, OpenCV |
 | [📖 BridgeTales AI](https://github.com/HarshitaRag/BridgeTales-AI) | **Hackathon project** — interactive AI storybook platform with branching narratives, AI-generated images, and speech. Integrated Visa API for local business donations. | AWS Bedrock, React, Node.js, PostgreSQL |
 | [🏆 Big Back Bites](https://github.com/vinisha231/Big-Back-Bites) | **🥇 Winner — IxDA UWB Designathon 2026.** Food discovery app designed in Figma and built as a fully interactive frontend. | TypeScript, Figma |
+
+---
+
+## Contribution Streak
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=vinisha231&theme=tokyonight&hide_border=true&date_format=M%20j%5B%2C%20Y%5D" />
+</p>
+
+---
+
+## Activity Graph
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=vinisha231&theme=city-lights&hide_border=true&area=true" />
+</p>
+
 ---
 
 ## 📬 Let's Connect!
