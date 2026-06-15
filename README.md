@@ -9,6 +9,7 @@ I'm a **Computer Science & Software Engineering and Mathematics** senior at the 
 ---
 
 ## Portfolio
+[Portfolio]([https://vinisha231.github.io/portfolio/)
 
 ---
 ## Education 
