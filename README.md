@@ -10,16 +10,11 @@ I'm a **Computer Science & Software Engineering and Mathematics** senior at the 
 
 ## Portfolio
 
+---
+## Education 
+
 **University of Washington Bothell** — B.S. Computer Science & Software Engineering · B.S. Mathematics
 GPA: 3.88 · Sep 2022 – Jun 2026
-
----
-
-## Contribution Streak
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=vinisha231&theme=tokyonight&hide_border=true&date_format=M%20j%5B%2C%20Y%5D" />
-</p>
 
 ---
 
