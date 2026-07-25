@@ -4,7 +4,7 @@
 
 I'm a Computational Linguistics Master's at the University of Washington Seattle and **Computer Science & Software Engineering and Mathematics** graduate at the **University of Washington Bothell**, passionate about AI/ML research and building full-stack applications that solve real problems.
 
-🔬 Currently writing to publish my undergraduate research on sparse-view CT reconstruction, using neural networks to produce high-quality medical images from fewer X-ray projections, reducing patient radiation exposure.
+I'm working as an AI Engineer at Avanade. 
 
 ---
 
