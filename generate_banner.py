@@ -1,9 +1,149 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 302" width="900" height="302">
+#!/usr/bin/env python3
+"""Regenerate tokyo_banner.svg with live Tokyo time/weather. Run on a schedule via GitHub Actions."""
+import json
+import math
+import urllib.request
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
+
+TOKYO = ZoneInfo("Asia/Tokyo")
+LAT, LON = 35.6762, 139.6503
+
+WEATHER_MAP = {
+    0: ("Clear", "clear"), 1: ("Mostly Clear", "clear"), 2: ("Partly Cloudy", "cloudy"),
+    3: ("Overcast", "cloudy"), 45: ("Fog", "fog"), 48: ("Fog", "fog"),
+    51: ("Drizzle", "rain"), 53: ("Drizzle", "rain"), 55: ("Drizzle", "rain"),
+    56: ("Freezing Drizzle", "rain"), 57: ("Freezing Drizzle", "rain"),
+    61: ("Rain", "rain"), 63: ("Rain", "rain"), 65: ("Heavy Rain", "rain"),
+    66: ("Freezing Rain", "rain"), 67: ("Freezing Rain", "rain"),
+    71: ("Snow", "snow"), 73: ("Snow", "snow"), 75: ("Heavy Snow", "snow"), 77: ("Snow Grains", "snow"),
+    80: ("Rain Showers", "rain"), 81: ("Rain Showers", "rain"), 82: ("Heavy Showers", "rain"),
+    85: ("Snow Showers", "snow"), 86: ("Snow Showers", "snow"),
+    95: ("Thunderstorm", "storm"), 96: ("Thunderstorm", "storm"), 99: ("Thunderstorm", "storm"),
+}
+
+WEATHER_EMOJI = {"clear_day": "☀️", "clear_night": "\U0001f319", "cloudy": "☁️",
+                 "rain": "\U0001f327️", "storm": "⛈️", "snow": "❄️", "fog": "\U0001f32b️"}
+
+
+def fetch_weather():
+    url = (f"https://api.open-meteo.com/v1/forecast?latitude={LAT}&longitude={LON}"
+           f"&current_weather=true&daily=sunrise,sunset&timezone=Asia%2FTokyo&past_days=1&forecast_days=2")
+    with urllib.request.urlopen(url, timeout=15) as resp:
+        return json.load(resp)
+
+
+def parse_local(dt_str):
+    return datetime.fromisoformat(dt_str).replace(tzinfo=TOKYO)
+
+
+def lerp(a, b, t):
+    return a + (b - a) * t
+
+
+def build_svg(now, label, condition, phase, sun_moon_x, sun_moon_y, temp_c):
+    is_day = phase == "day"
+    is_clear = condition == "clear"
+    show_sun = is_day and is_clear
+    show_moon = (not is_day) and is_clear
+    show_clouds = condition in ("cloudy", "rain", "storm", "fog")
+    show_rain = condition in ("rain", "storm")
+    show_snow = condition == "snow"
+    show_storm_flash = condition == "storm"
+    show_fog = condition == "fog"
+
+    if is_day and condition == "clear":
+        sky_stops = [("0%", "#3a7bd5"), ("55%", "#78c6e8"), ("100%", "#ffe3a3")]
+    elif is_day and condition == "cloudy":
+        sky_stops = [("0%", "#5c7a99"), ("55%", "#8b9fb3"), ("100%", "#c3cdd6")]
+    elif is_day and condition in ("rain", "storm"):
+        sky_stops = [("0%", "#2b323d"), ("55%", "#3d4652"), ("100%", "#525b66")]
+    elif is_day and condition == "fog":
+        sky_stops = [("0%", "#aeb6bd"), ("55%", "#c6ccd1"), ("100%", "#dde1e4")]
+    elif (not is_day) and condition == "clear":
+        sky_stops = [("0%", "#060611"), ("60%", "#0d1117"), ("100%", "#1a1b2e")]
+    else:
+        sky_stops = [("0%", "#040508"), ("60%", "#0a0d13"), ("100%", "#12141c")]
+
+    sky_gradient = "\n".join(f'      <stop offset="{o}" stop-color="{c}"/>' for o, c in sky_stops)
+
+    weather_key = "clear_day" if show_sun else ("clear_night" if show_moon else condition)
+    emoji = WEATHER_EMOJI.get(weather_key, "")
+    footer_stop_color = sky_stops[-1][1]
+
+    celestial = ""
+    if show_sun:
+        celestial = f'''
+  <g filter="url(#glow-sun)">
+    <circle cx="{sun_moon_x:.0f}" cy="{sun_moon_y:.0f}" r="26" fill="#fff3c4"/>
+    <circle cx="{sun_moon_x:.0f}" cy="{sun_moon_y:.0f}" r="18" fill="#ffdd6b"/>
+  </g>'''
+    elif show_moon:
+        celestial = f'''
+  <circle cx="{sun_moon_x:.0f}" cy="{sun_moon_y:.0f}" r="22" fill="#c9b99a" opacity="0.85"/>
+  <circle cx="{sun_moon_x + 12:.0f}" cy="{sun_moon_y - 7:.0f}" r="19" fill="{sky_stops[0][1]}"/>'''
+
+    stars = ""
+    if show_moon:
+        star_data = [(22,18,1.2,3.1,0),(78,42,0.9,2.4,0.7),(145,14,1.4,4,1.2),(210,32,1.0,2.8,0.3),
+                     (270,12,1.3,3.5,1.8),(340,25,0.8,2.2,0.5),(410,9,1.5,3,2.1),(470,30,0.9,2.6,0.9),
+                     (535,16,1.2,4.2,1.4),(595,38,1.0,3,0.2),(660,22,1.3,2.9,1.6),(720,10,0.8,3.7,0.4),
+                     (760,44,1.1,2.5,2),(875,28,1.0,3.3,0.8),(175,50,1.0,5,0.6),(445,48,1.1,3.8,1.1),
+                     (690,52,1.0,4,1.9),(380,68,0.9,3,0.4)]
+        stars = "\n  <g>\n" + "\n".join(
+            f'    <circle cx="{x}" cy="{y}" r="{r}" fill="white"><animate attributeName="opacity" '
+            f'values="1;0.2;1" dur="{d}s" repeatCount="indefinite" begin="{b}s"/></circle>'
+            for x, y, r, d, b in star_data) + "\n  </g>"
+
+    clouds = ""
+    if show_clouds:
+        cloud_fill = "#e8edf2" if is_day else "#3a4250"
+        cloud_opacity = "0.55" if is_day else "0.4"
+        clouds = f'''
+  <g fill="{cloud_fill}" opacity="{cloud_opacity}">
+    <ellipse cx="120" cy="55" rx="55" ry="16"/><ellipse cx="165" cy="48" rx="38" ry="13"/>
+    <ellipse cx="480" cy="35" rx="60" ry="17"/><ellipse cx="530" cy="42" rx="40" ry="13"/>
+    <ellipse cx="760" cy="60" rx="50" ry="15"/><ellipse cx="805" cy="52" rx="34" ry="12"/>
+  </g>'''
+
+    rain = ""
+    if show_rain:
+        drops = []
+        for i in range(28):
+            x = (i * 33) % 900
+            dur = 0.6 + (i % 5) * 0.08
+            begin = (i % 7) * 0.15
+            drops.append(f'    <line x1="{x}" y1="-10" x2="{x-8}" y2="20" stroke="#9fc3ff" stroke-width="1.5" opacity="0.55">'
+                         f'<animateTransform attributeName="transform" type="translate" from="0 0" to="-40 300" '
+                         f'dur="{dur:.2f}s" repeatCount="indefinite" begin="{begin:.2f}s"/></line>')
+        rain = '\n  <g clip-path="url(#clip)">\n' + "\n".join(drops) + "\n  </g>"
+
+    snow = ""
+    if show_snow:
+        flakes = []
+        for i in range(24):
+            x = (i * 38) % 900
+            dur = 4 + (i % 5)
+            begin = (i % 6) * 0.6
+            flakes.append(f'    <circle cx="{x}" cy="-10" r="2" fill="white" opacity="0.8">'
+                          f'<animateTransform attributeName="transform" type="translate" from="0 0" to="10 300" '
+                          f'dur="{dur}s" repeatCount="indefinite" begin="{begin}s"/></circle>')
+        snow = '\n  <g clip-path="url(#clip)">\n' + "\n".join(flakes) + "\n  </g>"
+
+    fog_overlay = ""
+    if show_fog:
+        fog_overlay = '\n  <rect width="900" height="280" fill="#e8ecef" opacity="0.28"/>'
+
+    storm_flash = ""
+    if show_storm_flash:
+        storm_flash = ('\n  <rect width="900" height="280" fill="white" opacity="0">'
+                        '<animate attributeName="opacity" values="0;0;0;0.5;0;0.25;0;0;0;0;0;0;0;0;0;0" '
+                        'dur="6s" repeatCount="indefinite"/></rect>')
+
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 302" width="900" height="302">
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#060611"/>
-      <stop offset="60%" stop-color="#0d1117"/>
-      <stop offset="100%" stop-color="#1a1b2e"/>
+{sky_gradient}
     </linearGradient>
     <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#12121f"/>
@@ -34,31 +174,9 @@
 
   <!-- Sky -->
   <rect width="900" height="280" fill="url(#sky)"/>
-
-  <circle cx="599" cy="80" r="22" fill="#c9b99a" opacity="0.85"/>
-  <circle cx="611" cy="73" r="19" fill="#060611"/>
-
-  <g>
-    <circle cx="22" cy="18" r="1.2" fill="white"><animate attributeName="opacity" values="1;0.2;1" dur="3.1s" repeatCount="indefinite" begin="0s"/></circle>
-    <circle cx="78" cy="42" r="0.9" fill="white"><animate attributeName="opacity" values="1;0.2;1" dur="2.4s" repeatCount="indefinite" begin="0.7s"/></circle>
-    <circle cx="145" cy="14" r="1.4" fill="white"><animate attributeName="opacity" values="1;0.2;1" dur="4s" repeatCount="indefinite" begin="1.2s"/></circle>
-    <circle cx="210" cy="32" r="1.0" fill="white"><animate attributeName="opacity" values="1;0.2;1" dur="2.8s" repeatCount="indefinite" begin="0.3s"/></circle>
-    <circle cx="270" cy="12" r="1.3" fill="white"><animate attributeName="opacity" values="1;0.2;1" dur="3.5s" repeatCount="indefinite" begin="1.8s"/></circle>
-    <circle cx="340" cy="25" r="0.8" fill="white"><animate attributeName="opacity" values="1;0.2;1" dur="2.2s" repeatCount="indefinite" begin="0.5s"/></circle>
-    <circle cx="410" cy="9" r="1.5" fill="white"><animate attributeName="opacity" values="1;0.2;1" dur="3s" repeatCount="indefinite" begin="2.1s"/></circle>
-    <circle cx="470" cy="30" r="0.9" fill="white"><animate attributeName="opacity" values="1;0.2;1" dur="2.6s" repeatCount="indefinite" begin="0.9s"/></circle>
-    <circle cx="535" cy="16" r="1.2" fill="white"><animate attributeName="opacity" values="1;0.2;1" dur="4.2s" repeatCount="indefinite" begin="1.4s"/></circle>
-    <circle cx="595" cy="38" r="1.0" fill="white"><animate attributeName="opacity" values="1;0.2;1" dur="3s" repeatCount="indefinite" begin="0.2s"/></circle>
-    <circle cx="660" cy="22" r="1.3" fill="white"><animate attributeName="opacity" values="1;0.2;1" dur="2.9s" repeatCount="indefinite" begin="1.6s"/></circle>
-    <circle cx="720" cy="10" r="0.8" fill="white"><animate attributeName="opacity" values="1;0.2;1" dur="3.7s" repeatCount="indefinite" begin="0.4s"/></circle>
-    <circle cx="760" cy="44" r="1.1" fill="white"><animate attributeName="opacity" values="1;0.2;1" dur="2.5s" repeatCount="indefinite" begin="2s"/></circle>
-    <circle cx="875" cy="28" r="1.0" fill="white"><animate attributeName="opacity" values="1;0.2;1" dur="3.3s" repeatCount="indefinite" begin="0.8s"/></circle>
-    <circle cx="175" cy="50" r="1.0" fill="white"><animate attributeName="opacity" values="1;0.2;1" dur="5s" repeatCount="indefinite" begin="0.6s"/></circle>
-    <circle cx="445" cy="48" r="1.1" fill="white"><animate attributeName="opacity" values="1;0.2;1" dur="3.8s" repeatCount="indefinite" begin="1.1s"/></circle>
-    <circle cx="690" cy="52" r="1.0" fill="white"><animate attributeName="opacity" values="1;0.2;1" dur="4s" repeatCount="indefinite" begin="1.9s"/></circle>
-    <circle cx="380" cy="68" r="0.9" fill="white"><animate attributeName="opacity" values="1;0.2;1" dur="3s" repeatCount="indefinite" begin="0.4s"/></circle>
-  </g>
-
+{celestial}
+{stars}
+{clouds}
 
   <!-- BACK BUILDINGS -->
   <g fill="#131d35">
@@ -211,8 +329,8 @@
       <animate attributeName="opacity" values="1;1;0.3;1;1;0.5;1" dur="6s" repeatCount="indefinite" begin="1s"/>
     </text>
   </g>
-
-
+{fog_overlay}
+{storm_flash}
 
   <!-- ROAD -->
   <rect y="244" width="900" height="36" fill="url(#road)"/>
@@ -274,8 +392,8 @@
       <circle cx="57" cy="268" r="3" fill="#dd1100" opacity="0.8"/>
     </g>
   </g>
-
-
+{rain}
+{snow}
 
   <!-- TEXT CENTERED IN SKY -->
   <g filter="url(#glow-text)">
@@ -285,7 +403,55 @@
   <line x1="270" y1="144" x2="630" y2="144" stroke="#5983FC" stroke-width="0.5" opacity="0.4"/>
 
   <!-- FOOTER: live Tokyo time + weather -->
-  <rect y="280" width="900" height="22" fill="#1a1b2e"/>
+  <rect y="280" width="900" height="22" fill="{footer_stop_color}"/>
   <line x1="0" y1="280" x2="900" y2="280" stroke="#5983FC" stroke-width="0.5" opacity="0.3"/>
-  <text x="450" y="295" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#9fb3d9" letter-spacing="0.5">🌙  Tokyo &#183; 1:50 AM JST &#183; 24&#176;C</text>
+  <text x="450" y="295" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#9fb3d9" letter-spacing="0.5">{emoji}  Tokyo &#183; {label} &#183; {temp_c:.0f}&#176;C</text>
 </svg>
+'''
+
+
+def main():
+    data = fetch_weather()
+    cw = data["current_weather"]
+    code = cw["weathercode"]
+    temp_c = cw["temperature"]
+    desc, condition = WEATHER_MAP.get(code, ("Clear", "clear"))
+
+    now = datetime.now(TOKYO)
+
+    daily = data["daily"]
+    sunrises = [parse_local(t) for t in daily["sunrise"]]
+    sunsets = [parse_local(t) for t in daily["sunset"]]
+    # past_days=1 & forecast_days=2 -> [yesterday, today, tomorrow]
+    y_rise, t_rise, tm_rise = sunrises
+    y_set, t_set, tm_set = sunsets
+
+    if t_rise <= now < t_set:
+        phase = "day"
+        fraction = (now - t_rise) / (t_set - t_rise)
+        x = lerp(90, 810, fraction)
+        y = 235 - math.sin(math.pi * fraction) * 195
+    elif now >= t_set:
+        phase = "night"
+        night_end = tm_rise
+        fraction = (now - t_set) / (night_end - t_set)
+        x = lerp(90, 810, fraction)
+        y = 235 - math.sin(math.pi * fraction) * 195
+    else:
+        phase = "night"
+        fraction = (now - y_set) / (t_rise - y_set)
+        x = lerp(90, 810, fraction)
+        y = 235 - math.sin(math.pi * fraction) * 195
+
+    hour12 = now.strftime("%I:%M").lstrip("0") or "12:00"
+    label = f"{hour12} {now.strftime('%p')} JST"
+
+    svg = build_svg(now, label, condition, phase, x, y, temp_c)
+    with open("tokyo_banner.svg", "w") as f:
+        f.write(svg)
+
+    print(f"phase={phase} condition={condition} desc={desc} temp={temp_c}C time={label} sun/moon=({x:.0f},{y:.0f})")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,34 @@
+name: Update Tokyo Banner
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+jobs:
+  update-banner:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate banner
+        run: python3 generate_banner.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name "vinisha231"
+          git config user.email "129325340+vinisha231@users.noreply.github.com"
+          if ! git diff --quiet tokyo_banner.svg; then
+            git add tokyo_banner.svg
+            git commit -m "Update Tokyo banner: time + weather"
+            git push
+          else
+            echo "No change, skipping commit."
+          fi
