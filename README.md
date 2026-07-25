@@ -4,7 +4,7 @@
 
 I'm a Computational Linguistics Master's at the University of Washington Seattle and **Computer Science & Software Engineering and Mathematics** graduate at the **University of Washington Bothell**, passionate about AI/ML research and building full-stack applications that solve real problems.
 
-I'm working as an AI Engineer at Avanade. 
+I'm working as an AI Engineer at Avanade.
 
 ---
 
@@ -12,12 +12,14 @@ I'm working as an AI Engineer at Avanade.
 [Portfolio](https://vinisha231.github.io/portfolio/)
 
 ---
-## Education 
-**University of Washington Seattle** — M.S. Computational Linguistics 
+
+## Education
+**University of Washington Seattle** — M.S. Computational Linguistics
 GPA: -.-- · Jun 2026 – Aug 2027
 
 **University of Washington Bothell** — B.S. Computer Science & Software Engineering · B.S. Mathematics
 GPA: 3.87 · Sep 2022 – Jun 2026
+
 ---
 
 ## 📬 Let's Connect!
