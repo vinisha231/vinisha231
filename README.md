@@ -13,18 +13,11 @@ I'm working as an AI Engineer at Avanade.
 
 ---
 ## Education 
+**University of Washington Seattle** — M.S. Computational Linguistics 
+GPA: -.-- · Jun 2026 – Aug 2027
 
 **University of Washington Bothell** — B.S. Computer Science & Software Engineering · B.S. Mathematics
-GPA: 3.88 · Sep 2022 – Jun 2026
-
----
-
-## Activity Graph
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=vinisha231&theme=city-lights&hide_border=true&area=true" />
-</p>
-
+GPA: 3.87 · Sep 2022 – Jun 2026
 ---
 
 ## 📬 Let's Connect!
