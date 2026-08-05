@@ -15,7 +15,7 @@ I'm working as an AI Engineer at Avanade.
 
 ## Education
 **University of Washington Seattle** — M.S. Computational Linguistics
-GPA: -.-- · Jun 2026 – Aug 2027
+GPA: -.-- · Jun 2026 – --- ----
 
 **University of Washington Bothell** — B.S. Computer Science & Software Engineering · B.S. Mathematics
 GPA: 3.87 · Sep 2022 – Jun 2026
