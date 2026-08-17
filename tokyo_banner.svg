@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 302" width="900" height="302">
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#3a7bd5"/>
-      <stop offset="55%" stop-color="#78c6e8"/>
-      <stop offset="100%" stop-color="#ffe3a3"/>
+      <stop offset="0%" stop-color="#5c7a99"/>
+      <stop offset="55%" stop-color="#8b9fb3"/>
+      <stop offset="100%" stop-color="#c3cdd6"/>
     </linearGradient>
     <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#12121f"/>
@@ -35,12 +35,13 @@
   <!-- Sky -->
   <rect width="900" height="280" fill="url(#sky)"/>
 
-  <g filter="url(#glow-sun)">
-    <circle cx="223" cy="128" r="26" fill="#fff3c4"/>
-    <circle cx="223" cy="128" r="18" fill="#ffdd6b"/>
+
+
+  <g fill="#e8edf2" opacity="0.55">
+    <ellipse cx="120" cy="55" rx="55" ry="16"/><ellipse cx="165" cy="48" rx="38" ry="13"/>
+    <ellipse cx="480" cy="35" rx="60" ry="17"/><ellipse cx="530" cy="42" rx="40" ry="13"/>
+    <ellipse cx="760" cy="60" rx="50" ry="15"/><ellipse cx="805" cy="52" rx="34" ry="12"/>
   </g>
-
-
 
   <!-- BACK BUILDINGS -->
   <g fill="#131d35">
@@ -267,7 +268,7 @@
   <line x1="270" y1="144" x2="630" y2="144" stroke="#5983FC" stroke-width="0.5" opacity="0.4"/>
 
   <!-- FOOTER: live Tokyo time + weather -->
-  <rect y="280" width="900" height="22" fill="#ffe3a3"/>
+  <rect y="280" width="900" height="22" fill="#c3cdd6"/>
   <line x1="0" y1="280" x2="900" y2="280" stroke="#5983FC" stroke-width="0.5" opacity="0.3"/>
-  <text x="450" y="295" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#9fb3d9" letter-spacing="0.5">☀️  Tokyo &#183; 7:30 AM JST &#183; 24&#176;C</text>
+  <text x="450" y="295" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#9fb3d9" letter-spacing="0.5">☁️  Tokyo &#183; 8:28 AM JST &#183; 26&#176;C</text>
 </svg>
