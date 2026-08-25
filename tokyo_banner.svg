@@ -35,8 +35,8 @@
   <!-- Sky -->
   <rect width="900" height="280" fill="url(#sky)"/>
 
-  <circle cx="426" cy="41" r="22" fill="#c9b99a" opacity="0.85"/>
-  <circle cx="438" cy="34" r="19" fill="#060611"/>
+  <circle cx="494" cy="44" r="22" fill="#c9b99a" opacity="0.85"/>
+  <circle cx="506" cy="37" r="19" fill="#060611"/>
 
   <g>
     <circle cx="22" cy="18" r="1.2" fill="white"><animate attributeName="opacity" values="1;0.2;1" dur="3.1s" repeatCount="indefinite" begin="0s"/></circle>
@@ -287,5 +287,5 @@
   <!-- FOOTER: live Tokyo time + weather -->
   <rect y="280" width="900" height="22" fill="#1a1b2e"/>
   <line x1="0" y1="280" x2="900" y2="280" stroke="#5983FC" stroke-width="0.5" opacity="0.3"/>
-  <text x="450" y="295" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#9fb3d9" letter-spacing="0.5">🌙  Tokyo &#183; 11:21 PM JST &#183; 27&#176;C</text>
+  <text x="450" y="295" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#9fb3d9" letter-spacing="0.5">🌙  Tokyo &#183; 12:23 AM JST &#183; 26&#176;C</text>
 </svg>
