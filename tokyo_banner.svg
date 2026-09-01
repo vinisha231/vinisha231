@@ -36,8 +36,8 @@
   <rect width="900" height="280" fill="url(#sky)"/>
 
   <g filter="url(#glow-sun)">
-    <circle cx="262" cy="102" r="26" fill="#fff3c4"/>
-    <circle cx="262" cy="102" r="18" fill="#ffdd6b"/>
+    <circle cx="412" cy="43" r="26" fill="#fff3c4"/>
+    <circle cx="412" cy="43" r="18" fill="#ffdd6b"/>
   </g>
 
 
@@ -269,5 +269,5 @@
   <!-- FOOTER: live Tokyo time + weather -->
   <rect y="280" width="900" height="22" fill="#ffe3a3"/>
   <line x1="0" y1="280" x2="900" y2="280" stroke="#5983FC" stroke-width="0.5" opacity="0.3"/>
-  <text x="450" y="295" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#9fb3d9" letter-spacing="0.5">☀️  Tokyo &#183; 8:18 AM JST &#183; 24&#176;C</text>
+  <text x="450" y="295" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" fill="#9fb3d9" letter-spacing="0.5">☀️  Tokyo &#183; 11:00 AM JST &#183; 27&#176;C</text>
 </svg>
