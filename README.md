@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/vinisha231/vinisha231/main/tokyo_banner.svg" width="100%"/>
-</p>
-
 I'm a Computational Linguistics Master's at the University of Washington Seattle and **Computer Science & Software Engineering and Mathematics** graduate at the **University of Washington Bothell**, passionate about AI/ML research and building full-stack applications that solve real problems.
 
 I'm working as an AI Engineer at Avanade.
