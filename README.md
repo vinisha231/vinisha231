@@ -13,7 +13,7 @@ I'm a Computational Linguistics Master's at the University of Washington Seattle
 
 ## Education
 **University of Washington Seattle** — M.S. Computational Linguistics
-GPA: -.-- · Jun 2026 – --- ----
+GPA: 4.00 · Jun 2026 – present
 
 **University of Washington Bothell** — B.S. Computer Science & Software Engineering · B.S. Mathematics
 GPA: 3.87 · Sep 2022 – Jun 2026
